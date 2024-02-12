@@ -7,7 +7,7 @@ namespace HangFire.Controller
     [Route("[Controller]")]
     public class HomeController : ControllerBase
     {
-
+        [HttpGet]
         [Route("FireAndForget")]
         public string FireAndForget()
         {
@@ -16,7 +16,7 @@ namespace HangFire.Controller
             return $"JobId: { jobId}, FireAndForgetJob";
         }
 
-
+        [HttpGet]
         [Route("DelayedJob")]
         public string DelayedJob()
         {
@@ -24,7 +24,7 @@ namespace HangFire.Controller
             return $"JobId: { jobId}, DelayedJob";
         }
 
-
+        [HttpGet]
         [Route("ContinouosJob")]
         public string ContinouosJob()
         {
@@ -33,7 +33,7 @@ namespace HangFire.Controller
             return $"JobId: { jobId}, ContinouosJob";
         }
 
-
+        [HttpGet]
         [Route("RecurringJob")]
         public string RecurringJobs()
         {
